@@ -1,0 +1,35 @@
+<!-- layout.html -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+    		<title>Website</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'website/css/base.css' %}">
+	</head>
+	<body>
+	    <header class="jumbotron text-center">
+            <h1>3d Printing Journey</h1>
+            <p>A minha viagem pelo mundo de 3d printing</p>
+            <nav>
+                <a href="/home" class="btn btn-info">Home</a>
+                <a href="/printer" class="btn btn-info">My Printer</a>
+                <a href="/aboutme" class="btn btn-info">About Me</a>
+            </nav>
+        </header>
+
+	    <article class="container row">
+            <main class="center-block col-sm-6"> 
+                {% block main %}
+                {% endblock main %}
+            </main>
+		    <aside class="center-block col-sm-6">
+                
+                {% load static %}
+                <img src="{% static 'website/images/imagem.png' %}">
+            </aside>
+	    </article>
+	    <footer>Rogério Chaves, Teoria da Computação, 2021</footer>
+	</body>
+</html>
